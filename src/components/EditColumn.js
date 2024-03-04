@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
 
-
+//this is the edit column which has a quick list of submissions
 function EditColumn({ submissions, onSelect }) {
   const [sortBy, setSortBy] = useState(null);
   const [selectedSubmissionId, setSelectedSubmissionId] = useState(null);
 
+  //these sort the submissions by author, editor, and status 
   const handleSortBy = (field) => {
     if (sortBy === field) {
       setSortBy(`-${field}`);
@@ -21,21 +22,20 @@ function EditColumn({ submissions, onSelect }) {
   }) : submissions;
 
 
+  //this part selects a submission to open further details on from the quick list via submission id
   const handleSelectSubmission = (submissionId) => {
-    const selectedSubmission = submissions.find(submission => submission.id === submissionId);
+  const selectedSubmission = submissions.find(submission => submission.id === submissionId);
     
     if (selectedSubmissionId === submissionId) {
-      // If the clicked submission is already selected, deselect it
       setSelectedSubmissionId(null);
-      onSelect(null); // Notify parent component about deselection
+      onSelect(null); 
     } else {
-      // Otherwise, select the clicked submission
       setSelectedSubmissionId(submissionId);
-      onSelect(selectedSubmission); // Pass the selected submission to the parent
+      onSelect(selectedSubmission);
     }
   };
 
-
+//this changes the color of the submission in the list by genre
   const getButtonColor = (genre) => {
     switch (genre) {
       case 'Fiction':
@@ -52,6 +52,8 @@ function EditColumn({ submissions, onSelect }) {
         return '#DEDAF4'; // wonderful color palette from https://kdesign.co/blog/pastel-color-palette-examples/ number 16
     }
   };
+
+  //displays the buttons to sort and the list of submissions with relevent info
   return (
     <div className="box">
       <h2>Submissions</h2>

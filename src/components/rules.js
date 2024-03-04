@@ -1,6 +1,5 @@
-import { useState } from "react";
-import SubmitForm from "./SubmitForm";
 import React from "react";
+
 const rules = 
 `Submission Guidelines
 
@@ -32,15 +31,15 @@ Other Genre
 If you have something in an alternative genre and would like to know if it is suitable, contact uwrfprologue@outlook.com  (Examples include comics, song lyrics, etc.)
   `;
 
+  //displays the submission rules
 function Rules ( {toggleSubmit, showSubmit} ) {
-    return (
-      <div className="box">
-       <pre dangerouslySetInnerHTML={{ __html: rules }} />
-        <button className="submit" onClick={toggleSubmit}>
+  return (
+    <div className="box">
+      <pre dangerouslySetInnerHTML={{ __html: rules }} />
+      <button className="submit" onClick={toggleSubmit}>
         {showSubmit ? 'Ready to submit?' : 'Exit Form'}
-        
-          </button>
-      </div>
+      </button>
+    </div>
     )
   };
 

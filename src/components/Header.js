@@ -1,6 +1,6 @@
 import React from 'react'
-import EditorLogin from './EditorLogin'
 
+//displays the title and the log in button
 const Header = ({onLoginClick, onLogoutClick, loggedIn}) => {
   return (
     <div className="box">

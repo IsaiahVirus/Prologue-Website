@@ -35,11 +35,10 @@ const EditForm = () => {
       console.log(formData);
     };
 
-  
+//displays the form
   return (
-    <div className="box"> 
-    <div>EditForm
-        <div>
+  <div className="box"> 
+  <div>EditForm<div>
     <h2>Edit Log</h2>
     <form onSubmit={handleSubmit}>
       <label>
@@ -116,12 +115,9 @@ const EditForm = () => {
       <button type="submit">Save</button>
     </form>
     </div>
-
-
-
     </div>
     </div>
-  ) 
-  }
+  )
+}
 
 export default EditForm ;

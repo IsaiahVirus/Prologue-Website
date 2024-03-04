@@ -36,7 +36,6 @@ const SubmitForm = () => {
   return (
     <div className="box">
     <div>SubmitForm
-        <div>
     <h2>Prologue Submissions</h2>
     <form onSubmit={handleSubmit}>
       <label>
@@ -64,40 +63,36 @@ const SubmitForm = () => {
         <option value="Poetry">Poetry</option>
         <option value="Script or Screenplay">Script or Screenplay</option>
         <option value="Other">Other</option>
-        
     </select>
     </label>
 
-      <label>
-        Author Name (can submit as anonymous):
-        <input
-          type="text"
-          name="authorName"
-          value={formData.authorName}
-          onChange={handleChange}
-          required
-        />
-      </label>
+    <label>
+    Author Name (can submit as anonymous):
+      <input
+        type="text"
+        name="authorName"
+        value={formData.authorName}
+        onChange={handleChange}
+        required
+      />
+    </label>
 
-      <label>
-        Upload Submisson as a .doc or .docx:
-        <input
-          type="file"
-          name="document"
-          onChange={handleFileChange}
-          accept=".doc, .docx"
-          required
-        />
-      </label>
+    <label>
+    Upload Submisson as a .doc or .docx:
+      <input
+        type="file"
+        name="document"
+        onChange={handleFileChange}
+        accept=".doc, .docx"
+        required
+      />
+    </label>
 
-      <button type="submit">Submit</button>
+    <button type="submit">Submit</button>
     </form>
     </div>
-
-
-
     </div>
-    </div> 
+    
   )
 }
 

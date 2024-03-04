@@ -1,3 +1,5 @@
+/*truly cannot take too much credit for this, the internet is my lego bin and I am smashing bits together*/
+
 .box {
   border-style: solid;
   border-color: red;
@@ -7,25 +9,19 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-
 }
 
 body {
-
   display: flex;
   justify-content: center;
   align-items: center;
- 
-  background-color: #aed9e0; /* Pastel blue background */
+  background-color: #aed9e0; 
 }
 
-
-/* Center text horizontally */
 .text-center {
   text-align: center;
 }
 
-/*shoutout to prepackaged styling*/
 form {
   max-width: 400px;
   margin: auto;
@@ -42,7 +38,6 @@ label {
 
 input,
 button {
-  
   padding: 10px;
   margin-bottom: 15px;
 }
